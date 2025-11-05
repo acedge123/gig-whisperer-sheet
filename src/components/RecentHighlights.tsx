@@ -1,3 +1,5 @@
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+
 const RecentHighlights = () => {
   const highlights = [
     {
@@ -15,17 +17,20 @@ const RecentHighlights = () => {
     {
       title: "AI Content Moderation API",
       description: "Proprietary ML moderation for brand safety with real-time UGC review at scale.",
-      link: "https://www.creatorcontentcheck.com/"
+      link: "https://www.creatorcontentcheck.com/",
+      linkDisplay: "CreatorContentCheck"
     },
     {
       title: "API-Driven Storefront Affiliate Application",
       description: "Creator Affiliate Platform for Lowe's Home Improvement enabling product linking, dynamic tracking, and attribution.",
-      link: "https://www.creatorlivenation.com/"
+      link: "https://www.creatorlivenation.com/",
+      linkDisplay: "CreatorLiveNation"
     },
     {
       title: "E-Commerce Re-Platform for Idea Village",
       description: "Re-platformed Idea Village (Copper Fit, Replenza Labs, MicroTouch) onto modern Shopify architecture—transforming a legacy DR advertiser into a data-driven, D2C-first operation.",
-      link: "https://copperfitusa.com/"
+      link: "https://copperfitusa.com/",
+      linkDisplay: "CopperFitUSA"
     },
   ];
 
@@ -41,22 +46,31 @@ const RecentHighlights = () => {
               className="p-8 bg-background border border-border hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 group"
             >
               <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
-                {highlight.link ? (
-                  <a 
-                    href={highlight.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    {highlight.title}
-                  </a>
-                ) : (
-                  highlight.title
-                )}
+                {highlight.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 {highlight.description}
               </p>
+              {highlight.link && (
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <a 
+                      href={highlight.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline text-sm font-semibold inline-block"
+                    >
+                      {highlight.linkDisplay}
+                    </a>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80">
+                    <div className="space-y-2">
+                      <p className="text-sm font-medium">Visit Site</p>
+                      <p className="text-xs text-muted-foreground break-all">{highlight.link}</p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+              )}
             </div>
           ))}
         </div>
