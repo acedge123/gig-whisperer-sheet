@@ -13,6 +13,9 @@ const RecentHighlights = () => {
     {
       title: "Enterprise-Grade Headless Commerce Build",
       description: "Launched a multi-tenant, AI-enhanced headless e-commerce platform (Supabase, React, Vercel) with unified checkout, personalization, and analytics.",
+      link: "https://www.fourvisions.com",
+      linkDisplay: "FourVisions",
+      screenshot: "/screenshots/fourvisions.png"
     },
     {
       title: "AI Content Moderation API",
