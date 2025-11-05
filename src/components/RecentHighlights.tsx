@@ -54,7 +54,7 @@ const RecentHighlights = () => {
               <h3 className="text-2xl font-bold mb-4 text-accent">
                 {highlight.title}
               </h3>
-              <p className="text-accent/80 leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 {highlight.description}
               </p>
               {highlight.link && highlight.screenshot && (
