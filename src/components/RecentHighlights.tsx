@@ -28,8 +28,7 @@ const RecentHighlights = () => {
       title: "API-Driven Storefront Affiliate Application",
       description: "Creator Affiliate Platform for Lowe's Home Improvement enabling product linking, dynamic tracking, and attribution.",
       link: "https://www.creatorlivenation.com/",
-      linkDisplay: "CreatorLiveNation",
-      screenshot: "/screenshots/creatorlivenation.png"
+      linkDisplay: "CreatorLiveNation"
     },
     {
       title: "E-Commerce Re-Platform for Idea Village",
@@ -57,7 +56,7 @@ const RecentHighlights = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 {highlight.description}
               </p>
-              {highlight.link && (
+              {highlight.link && highlight.screenshot && (
                 <HoverCard>
                   <HoverCardTrigger asChild>
                     <a 
@@ -77,6 +76,16 @@ const RecentHighlights = () => {
                     />
                   </HoverCardContent>
                 </HoverCard>
+              )}
+              {highlight.link && !highlight.screenshot && (
+                <a 
+                  href={highlight.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline text-sm font-semibold inline-block"
+                >
+                  {highlight.linkDisplay}
+                </a>
               )}
             </div>
           ))}
