@@ -108,6 +108,21 @@ All colors MUST be HSL.
       gap: 2rem !important;
     }
 
+    /* Page break controls between sections */
+    section {
+      page-break-inside: avoid !important;
+    }
+
+    /* Recent Highlights starts new page */
+    section:nth-of-type(3) {
+      page-break-before: always !important;
+    }
+
+    /* Core Competencies starts new page */
+    section:nth-of-type(4) {
+      page-break-before: always !important;
+    }
+
     /* Compact for landscape */
     section {
       padding: 1rem 0 !important;
