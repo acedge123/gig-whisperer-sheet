@@ -20,6 +20,7 @@ const RecentHighlights = () => {
     {
       title: "API-Driven Storefront Affiliate Application",
       description: "Creator Affiliate Platform for Lowe's Home Improvement enabling product linking, dynamic tracking, and attribution.",
+      link: "https://www.creatorlivenation.com/"
     },
     {
       title: "E-Commerce Re-Platform for Idea Village",
