@@ -100,9 +100,12 @@ All colors MUST be HSL.
       border-color: hsl(210 100% 56%) !important;
     }
 
-    /* Start leadership on new page */
-    section:nth-of-type(2) > div > div:last-child {
-      page-break-before: always !important;
+    /* Make leadership horizontal in print */
+    section:nth-of-type(2) .grid.md\\:grid-cols-3 {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      gap: 2rem !important;
     }
 
     /* Compact for landscape */
