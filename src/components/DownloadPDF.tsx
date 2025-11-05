@@ -1,16 +1,16 @@
 import { Download } from "lucide-react";
 import { Button } from "./ui/button";
-import html2pdf from "html2pdf.js";
 
 const DownloadPDF = () => {
-  const handleDownload = () => {
+  const handleDownload = async () => {
+    const html2pdf = (await import("html2pdf.js")).default;
     const element = document.querySelector('main');
     const opt = {
       margin: 0.5,
       filename: 'TheGigAgency-TearSheet.pdf',
-      image: { type: 'jpeg' as const, quality: 0.98 },
+      image: { type: 'jpeg' as 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' as const }
+      jsPDF: { unit: 'in' as 'in', format: 'letter' as 'letter', orientation: 'portrait' as 'portrait' }
     };
     
     html2pdf().set(opt).from(element).save();
