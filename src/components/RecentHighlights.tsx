@@ -18,19 +18,22 @@ const RecentHighlights = () => {
       title: "AI Content Moderation API",
       description: "Proprietary ML moderation for brand safety with real-time UGC review at scale.",
       link: "https://www.creatorcontentcheck.com/",
-      linkDisplay: "CreatorContentCheck"
+      linkDisplay: "CreatorContentCheck",
+      screenshot: "/screenshots/creatorcontentcheck.png"
     },
     {
       title: "API-Driven Storefront Affiliate Application",
       description: "Creator Affiliate Platform for Lowe's Home Improvement enabling product linking, dynamic tracking, and attribution.",
       link: "https://www.creatorlivenation.com/",
-      linkDisplay: "CreatorLiveNation"
+      linkDisplay: "CreatorLiveNation",
+      screenshot: "/screenshots/creatorlivenation.png"
     },
     {
       title: "E-Commerce Re-Platform for Idea Village",
       description: "Re-platformed Idea Village (Copper Fit, Replenza Labs, MicroTouch) onto modern Shopify architecture—transforming a legacy DR advertiser into a data-driven, D2C-first operation.",
       link: "https://copperfitusa.com/",
-      linkDisplay: "CopperFitUSA"
+      linkDisplay: "CopperFitUSA",
+      screenshot: "/screenshots/copperfitusa.png"
     },
   ];
 
@@ -63,11 +66,12 @@ const RecentHighlights = () => {
                       {highlight.linkDisplay}
                     </a>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-80">
-                    <div className="space-y-2">
-                      <p className="text-sm font-medium">Visit Site</p>
-                      <p className="text-xs text-muted-foreground break-all">{highlight.link}</p>
-                    </div>
+                  <HoverCardContent className="w-96 p-0 overflow-hidden">
+                    <img 
+                      src={highlight.screenshot} 
+                      alt={`Screenshot of ${highlight.linkDisplay}`}
+                      className="w-full h-auto"
+                    />
                   </HoverCardContent>
                 </HoverCard>
               )}
