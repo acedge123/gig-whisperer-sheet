@@ -15,6 +15,7 @@ const RecentHighlights = () => {
     {
       title: "AI Content Moderation API",
       description: "Proprietary ML moderation for brand safety with real-time UGC review at scale.",
+      link: "https://www.creatorcontentcheck.com/"
     },
     {
       title: "API-Driven Storefront Affiliate Application",
@@ -38,7 +39,18 @@ const RecentHighlights = () => {
               className="p-8 bg-background border border-border hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 group"
             >
               <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
-                {highlight.title}
+                {highlight.link ? (
+                  <a 
+                    href={highlight.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {highlight.title}
+                  </a>
+                ) : (
+                  highlight.title
+                )}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {highlight.description}
