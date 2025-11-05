@@ -64,7 +64,15 @@ All colors MUST be HSL.
   @media print {
     @page {
       size: landscape;
-      margin: 0.5in;
+      margin: 0;
+    }
+
+    html {
+      margin: 0 !important;
+    }
+
+    body {
+      margin: 0.5in !important;
     }
 
     * {
@@ -76,11 +84,6 @@ All colors MUST be HSL.
     body {
       background: hsl(0 0% 3%) !important;
       color: hsl(0 0% 98%) !important;
-    }
-
-    /* Hide print headers/footers */
-    @page {
-      margin: 0.5in;
     }
 
     /* Preserve design colors */
@@ -95,6 +98,11 @@ All colors MUST be HSL.
     .text-accent, .border-accent {
       color: hsl(210 100% 56%) !important;
       border-color: hsl(210 100% 56%) !important;
+    }
+
+    /* Start leadership on new page */
+    section:nth-of-type(2) > div > div:last-child {
+      page-break-before: always !important;
     }
 
     /* Compact for landscape */
