@@ -2,7 +2,7 @@ const Snapshot = () => {
   const stats = [
     { label: "Founded", value: "2017" },
     { label: "HQ", value: "Los Angeles, CA" },
-    { label: "Core Expertise", value: "AI + MarTech, E-Commerce, Product Innovation" },
+    { label: "Core Expertise", value: "AI + MarTech, Paid Advertising, E-Commerce, Product Innovation" },
   ];
 
   const leadership = [
