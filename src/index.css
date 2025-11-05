@@ -60,4 +60,68 @@ All colors MUST be HSL.
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
   }
+
+  @media print {
+    @page {
+      size: landscape;
+      margin: 0.5in;
+    }
+
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    body {
+      background: hsl(0 0% 3%) !important;
+      color: hsl(0 0% 98%) !important;
+    }
+
+    /* Hide print headers/footers */
+    @page {
+      margin: 0.5in;
+    }
+
+    /* Preserve design colors */
+    .bg-background {
+      background: hsl(0 0% 3%) !important;
+    }
+
+    .bg-secondary {
+      background: hsl(0 0% 12%) !important;
+    }
+
+    .text-accent, .border-accent {
+      color: hsl(210 100% 56%) !important;
+      border-color: hsl(210 100% 56%) !important;
+    }
+
+    /* Compact for landscape */
+    section {
+      padding: 1rem 0 !important;
+    }
+
+    .py-24 {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    h1 {
+      font-size: 2.5rem !important;
+    }
+
+    h2 {
+      font-size: 2rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    h3 {
+      font-size: 1.25rem !important;
+    }
+
+    .grid {
+      gap: 0.75rem !important;
+    }
+  }
 }
