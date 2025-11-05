@@ -4,7 +4,6 @@ import RecentHighlights from "@/components/RecentHighlights";
 import CoreCompetencies from "@/components/CoreCompetencies";
 import ClientShowcase from "@/components/ClientShowcase";
 import Contact from "@/components/Contact";
-import DownloadPDF from "@/components/DownloadPDF";
 
 const Index = () => {
   return (
@@ -15,7 +14,6 @@ const Index = () => {
       <CoreCompetencies />
       <ClientShowcase />
       <Contact />
-      <DownloadPDF />
     </main>
   );
 };
