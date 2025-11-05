@@ -60,4 +60,85 @@ All colors MUST be HSL.
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
   }
+
+  @media print {
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      background: white !important;
+    }
+
+    /* Hero section - page 1 */
+    section:first-of-type {
+      min-height: auto !important;
+      height: 40vh !important;
+      page-break-after: avoid;
+    }
+
+    section:first-of-type h1 {
+      font-size: 3.5rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+    section:first-of-type p {
+      font-size: 1.1rem !important;
+    }
+
+    /* Snapshot section stays on page 1 */
+    section:nth-of-type(2) {
+      padding: 2rem 0 !important;
+      page-break-after: avoid;
+    }
+
+    section:nth-of-type(2) h2 {
+      font-size: 2.5rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    /* Force page break before Recent Highlights - START PAGE 2 */
+    section:nth-of-type(3) {
+      page-break-before: always;
+      padding: 2rem 0 !important;
+    }
+
+    section:nth-of-type(3) h2 {
+      font-size: 2.5rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    /* All remaining sections on page 2 */
+    section:nth-of-type(4),
+    section:nth-of-type(5),
+    section:nth-of-type(6) {
+      padding: 2rem 0 !important;
+      page-break-inside: avoid;
+    }
+
+    section h2 {
+      font-size: 2.5rem !important;
+    }
+
+    section h3 {
+      font-size: 1.25rem !important;
+    }
+
+    /* Compact spacing for print */
+    .container {
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+
+    /* Hide background images for cleaner print */
+    .absolute.inset-0 {
+      display: none !important;
+    }
+  }
 }
