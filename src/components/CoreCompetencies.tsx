@@ -13,8 +13,8 @@ const CoreCompetencies = () => {
       description: "Content intelligence, personalization, recommendation APIs",
     },
     {
-      title: "Digital Strategy",
-      description: "Media, CRM, and creative workflow optimization",
+      title: "Digital Strategy & Execution",
+      description: "Paid media ad buying, email management, creator & influencer recruitment, CRM optimization, and creative workflow management",
     },
   ];
 
