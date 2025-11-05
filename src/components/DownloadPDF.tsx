@@ -6,11 +6,22 @@ const DownloadPDF = () => {
     const html2pdf = (await import("html2pdf.js")).default;
     const element = document.querySelector('main');
     const opt = {
-      margin: 0.5,
+      margin: [0.3, 0.3, 0.3, 0.3] as [number, number, number, number],
       filename: 'TheGigAgency-TearSheet.pdf',
-      image: { type: 'jpeg' as 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in' as 'in', format: 'letter' as 'letter', orientation: 'portrait' as 'portrait' }
+      image: { type: 'jpeg' as 'jpeg', quality: 0.95 },
+      html2canvas: { 
+        scale: 1.5,
+        useCORS: true,
+        letterRendering: true,
+        logging: false
+      },
+      jsPDF: { 
+        unit: 'in' as 'in', 
+        format: 'a4' as 'a4', 
+        orientation: 'portrait' as 'portrait',
+        compress: true
+      },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
     
     html2pdf().set(opt).from(element).save();
