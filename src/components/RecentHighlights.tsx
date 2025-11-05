@@ -49,12 +49,12 @@ const RecentHighlights = () => {
           {highlights.map((highlight, index) => (
             <div
               key={index}
-              className="p-8 bg-background border-2 border-border hover:border-accent hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 group"
+              className="p-8 bg-background border-2 border-accent shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300"
             >
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
+              <h3 className="text-2xl font-bold mb-4 text-accent">
                 {highlight.title}
               </h3>
-              <p className="text-muted-foreground group-hover:text-accent/80 leading-relaxed mb-4 transition-colors">
+              <p className="text-accent/80 leading-relaxed mb-4">
                 {highlight.description}
               </p>
               {highlight.link && highlight.screenshot && (
