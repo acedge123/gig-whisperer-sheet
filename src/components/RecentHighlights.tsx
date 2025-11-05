@@ -24,6 +24,7 @@ const RecentHighlights = () => {
     {
       title: "E-Commerce Re-Platform for Idea Village",
       description: "Re-platformed Idea Village (Copper Fit, Replenza Labs, MicroTouch) onto modern Shopify architecture—transforming a legacy DR advertiser into a data-driven, D2C-first operation.",
+      link: "https://copperfitusa.com/"
     },
   ];
 
