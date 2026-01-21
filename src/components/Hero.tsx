@@ -7,32 +7,36 @@ const Hero = () => {
       {/* Diagonal stripe background */}
       <DiagonalStripe className="z-0" />
       
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <p className="font-display text-lg sm:text-xl md:text-2xl font-medium italic text-accent mb-4">
-              digital marketing & tech gurus
-            </p>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold italic uppercase mb-8 leading-none text-foreground">
-              We scale your team<br />
-              <span className="text-accent">so you don't have to.</span>
-            </h1>
-            <p className="font-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Digital marketing is hard. It requires a diverse team of creative, strategic and data-driven individuals. 
-              We are an outsourcing solution for every unique aspect of Digital Marketing and Technology.
-            </p>
-          </div>
-          
-          {/* Phone GIF */}
-          <div className="flex-shrink-0 w-64 sm:w-80 md:w-96 lg:w-[420px]">
-            <img 
-              src={phoneGif} 
-              alt="TGA Digital Marketing on mobile" 
-              className="w-full h-auto drop-shadow-2xl"
-            />
-          </div>
+      {/* Phone GIF - positioned to the right */}
+      <div className="absolute right-8 xl:right-16 top-1/2 -translate-y-1/3 z-20 hidden lg:block">
+        <img 
+          src={phoneGif} 
+          alt="TGA Digital Marketing on mobile" 
+          className="w-72 xl:w-80 2xl:w-96 h-auto drop-shadow-2xl"
+        />
+      </div>
+      
+      {/* Content - Centered */}
+      <div className="relative z-10 container mx-auto px-6 py-24 text-center">
+        <p className="font-display text-base sm:text-lg md:text-xl lg:text-2xl font-bold italic uppercase text-accent mb-6 tracking-wide">
+          Digital Marketing & Tech Gurus
+        </p>
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[110px] font-bold italic uppercase leading-[0.95] mb-8">
+          <span className="text-foreground block drop-shadow-sm">We Scale Your Team</span>
+          <span className="text-accent block">So You Don't Have To.</span>
+        </h1>
+        <p className="font-body text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Digital marketing is hard. It requires a diverse team of creative, strategic and data-driven individuals. 
+          We are an outsourcing solution for every unique aspect of Digital Marketing and Technology.
+        </p>
+        
+        {/* Mobile phone - shown below text on smaller screens */}
+        <div className="mt-12 lg:hidden">
+          <img 
+            src={phoneGif} 
+            alt="TGA Digital Marketing on mobile" 
+            className="w-48 sm:w-64 mx-auto h-auto drop-shadow-2xl"
+          />
         </div>
       </div>
     </section>
