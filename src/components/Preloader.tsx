@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '@/assets/tga-logo.png';
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,18 +48,18 @@ const Preloader = () => {
       }`}
     >
       <div className="flex flex-col items-center gap-6">
-        {/* Animated logo/spinner */}
+        {/* Animated spinner */}
         <div className="relative">
-          {/* Outer ring */}
           <div className="w-16 h-16 border-4 border-secondary rounded-full" />
-          {/* Spinning accent ring */}
           <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-accent rounded-full animate-spin" />
         </div>
         
-        {/* Logo text */}
-        <div className="font-display text-2xl font-bold italic uppercase text-foreground">
-          The Gig Agency
-        </div>
+        {/* Logo image */}
+        <img 
+          src={logo} 
+          alt="The Gig Agency" 
+          className="h-10 md:h-12 w-auto"
+        />
         
         {/* Loading dots */}
         <div className="flex gap-1">
