@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useScrollEffects } from '@/hooks/useScrollEffects';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/tga-logo.png';
 
 const Header = () => {
   const { isHeaderVisible, scrollY } = useScrollEffects();
@@ -52,9 +53,11 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a href="#" className="flex items-center">
-              <span className="font-display text-xl md:text-2xl font-bold italic uppercase text-foreground">
-                The Gig Agency
-              </span>
+              <img 
+                src={logo} 
+                alt="The Gig Agency" 
+                className="h-8 md:h-10 w-auto"
+              />
             </a>
 
             {/* Desktop Navigation */}
