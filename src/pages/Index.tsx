@@ -11,10 +11,12 @@ import SideContact from "@/components/SideContact";
 import SocialIcons from "@/components/SocialIcons";
 import DownloadPDF from "@/components/DownloadPDF";
 import AnimatedSection from "@/components/AnimatedSection";
+import Preloader from "@/components/Preloader";
 
 const Index = () => {
   return (
     <>
+      <Preloader />
       <Header />
       <SideContact />
       <SocialIcons />
