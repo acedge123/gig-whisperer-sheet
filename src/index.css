@@ -2,48 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* TGA Theme Design System
+   Colors are HSL values matching the WordPress theme
+   Primary: Dark Blue #0a1844 → 220 73% 15%
+   Accent: Teal #56d4b4 → 163 56% 58%
+   Background: Light Gray #f3f3f3 → 0 0% 95%
 */
+
+/* Font Definitions */
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('/fonts/droidsans.woff2') format('woff2'),
+       url('/fonts/droidsans.woff') format('woff'),
+       url('/fonts/droidsans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('/fonts/droidsansbold.woff2') format('woff2'),
+       url('/fonts/droidsansbold.woff') format('woff'),
+       url('/fonts/droidsansbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zuume';
+  src: url('/fonts/ZuumeCut-MediumItalic.woff2') format('woff2'),
+       url('/fonts/ZuumeCut-MediumItalic.woff') format('woff'),
+       url('/fonts/ZuumeCut-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zuume';
+  src: url('/fonts/ZuumeCut-BoldItalic.woff2') format('woff2'),
+       url('/fonts/ZuumeCut-BoldItalic.woff') format('woff'),
+       url('/fonts/ZuumeCut-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 
 @layer base {
   :root {
-    --background: 0 0% 3%;
-    --foreground: 0 0% 98%;
+    /* TGA Light Theme - Primary Palette */
+    --background: 0 0% 95%;           /* #f3f3f3 light gray */
+    --foreground: 220 73% 15%;        /* #0a1844 dark blue */
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;                /* white */
+    --card-foreground: 220 73% 15%;   /* dark blue */
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 73% 15%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 3%;
+    --primary: 220 73% 15%;           /* #0a1844 dark blue */
+    --primary-foreground: 0 0% 100%;  /* white */
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 90%;            /* lighter gray */
+    --secondary-foreground: 220 73% 15%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 49%;     /* #7c7c7c medium gray */
 
-    --accent: 210 100% 56%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 163 56% 58%;            /* #56d4b4 teal */
+    --accent-foreground: 220 73% 15%; /* dark blue on accent */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 210 100% 56%;
+    --border: 220 73% 15%;            /* dark blue borders */
+    --input: 220 73% 15%;
+    --ring: 163 56% 58%;              /* teal focus ring */
 
-    --radius: 0rem;
+    --radius: 0rem;                   /* sharp corners like WP theme */
 
-    /* Agency-specific tokens */
-    --glow: 210 100% 56%;
-    --glow-subtle: 210 100% 56% / 0.1;
-    --gradient-accent: linear-gradient(135deg, hsl(210 100% 56%), hsl(220 100% 65%));
-    --shadow-glow: 0 0 40px hsl(210 100% 56% / 0.15);
+    /* TGA-specific tokens */
+    --tga-blue-light: 197 52% 59%;    /* #56b2d4 - gradient start */
+    --tga-teal: 163 56% 58%;          /* #56d4b4 - gradient middle */
+    --tga-navy: 220 73% 15%;          /* #0a1844 - gradient end */
+    
+    /* Gradient for diagonal stripe */
+    --gradient-stripe: linear-gradient(
+      180deg,
+      hsl(197 52% 59%) 0%,
+      hsl(163 56% 58%) 50%,
+      hsl(220 73% 15%) 100%
+    );
+    
+    --shadow-card: 0 4px 20px rgba(10, 24, 68, 0.1);
+    --shadow-card-hover: 0 8px 30px rgba(10, 24, 68, 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark mode override - keeping for accessibility but TGA is light-first */
+  .dark {
+    --background: 220 73% 8%;
+    --foreground: 0 0% 95%;
+    --card: 220 73% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 73% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 220 73% 15%;
+    --secondary: 220 50% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 50% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 163 56% 58%;
+    --accent-foreground: 220 73% 15%;
+    --border: 220 50% 25%;
+    --input: 220 50% 25%;
+    --ring: 163 56% 58%;
   }
 }
 
@@ -54,11 +130,28 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-feature-settings: "kern" 1;
+    font-family: 'Droid Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    font-family: 'Zuume', 'Droid Sans', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    @apply tracking-tight;
+  }
+
+  /* Utility class for display headings */
+  .font-display {
+    font-family: 'Zuume', 'Droid Sans', sans-serif;
+    font-style: italic;
+  }
+
+  /* Utility class for body text */
+  .font-body {
+    font-family: 'Droid Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-style: normal;
   }
 
   @media print {
@@ -82,48 +175,35 @@ All colors MUST be HSL.
     }
 
     body {
-      background: hsl(0 0% 3%) !important;
-      color: hsl(0 0% 98%) !important;
+      background: hsl(0 0% 95%) !important;
+      color: hsl(220 73% 15%) !important;
     }
 
-    /* Preserve design colors */
     .bg-background {
-      background: hsl(0 0% 3%) !important;
+      background: hsl(0 0% 95%) !important;
     }
 
     .bg-secondary {
-      background: hsl(0 0% 12%) !important;
+      background: hsl(0 0% 90%) !important;
     }
 
     .text-accent, .border-accent {
-      color: hsl(210 100% 56%) !important;
-      border-color: hsl(210 100% 56%) !important;
+      color: hsl(163 56% 58%) !important;
+      border-color: hsl(163 56% 58%) !important;
     }
 
-    /* Make leadership horizontal in print */
-    section:nth-of-type(2) .grid.md\\:grid-cols-3 {
-      display: flex !important;
-      flex-direction: row !important;
-      justify-content: space-between !important;
-      gap: 2rem !important;
-    }
-
-    /* Page break controls between sections */
     section {
       page-break-inside: avoid !important;
     }
 
-    /* Recent Highlights starts new page */
     section:nth-of-type(3) {
       page-break-before: always !important;
     }
 
-    /* Core Competencies starts new page */
     section:nth-of-type(4) {
       page-break-before: always !important;
     }
 
-    /* Compact for landscape */
     section {
       padding: 1rem 0 !important;
     }
