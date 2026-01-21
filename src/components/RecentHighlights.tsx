@@ -41,20 +41,22 @@ const RecentHighlights = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary">
+    <section id="highlights" className="py-24 bg-secondary">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl md:text-7xl font-black mb-16">Recent Highlights</h2>
+        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold italic uppercase mb-16 text-foreground">
+          Recent Highlights
+        </h2>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {highlights.map((highlight, index) => (
             <div
               key={index}
-              className="p-8 bg-background border border-border hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 group"
+              className="p-8 bg-card border-l-4 border-foreground hover:border-accent hover:shadow-[var(--shadow-card-hover)] hover:scale-[1.02] transition-all duration-300 group"
             >
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
+              <h3 className="font-display text-xl sm:text-2xl font-bold italic mb-4 group-hover:text-accent transition-colors text-foreground">
                 {highlight.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="font-body text-muted-foreground leading-relaxed mb-4">
                 {highlight.description}
               </p>
               {highlight.link && highlight.screenshot && (
@@ -64,12 +66,12 @@ const RecentHighlights = () => {
                       href={highlight.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-accent hover:underline text-sm font-semibold inline-block"
+                      className="font-body text-accent hover:underline text-sm font-semibold inline-block"
                     >
-                      {highlight.linkDisplay}
+                      {highlight.linkDisplay} →
                     </a>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-96 p-0 overflow-hidden">
+                  <HoverCardContent className="w-96 p-0 overflow-hidden border-foreground">
                     <img 
                       src={highlight.screenshot} 
                       alt={`Screenshot of ${highlight.linkDisplay}`}
@@ -83,9 +85,9 @@ const RecentHighlights = () => {
                   href={highlight.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent hover:underline text-sm font-semibold inline-block"
+                  className="font-body text-accent hover:underline text-sm font-semibold inline-block"
                 >
-                  {highlight.linkDisplay}
+                  {highlight.linkDisplay} →
                 </a>
               )}
             </div>
