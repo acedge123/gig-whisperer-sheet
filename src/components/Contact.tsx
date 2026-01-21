@@ -1,9 +1,9 @@
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 border-t border-border">
+    <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto px-6 text-center">
         <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold italic uppercase mb-16 text-foreground">
-          Let's Build
+          Contact Us
         </h2>
         
         <div className="max-w-2xl mx-auto space-y-8">
@@ -30,11 +30,30 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mt-24 pt-12 border-t border-border">
-          <p className="font-body text-sm text-muted-foreground">
-            © {new Date().getFullYear()} The Gig Agency. Digital transformation at the intersection of strategy and execution.
-          </p>
+        <div className="mt-24 pt-12 border-t border-border flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <a 
+            href="#" 
+            className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            Privacy Policy
+          </a>
+          <a 
+            href="#" 
+            className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            Terms of Service
+          </a>
+          <a 
+            href="#contact" 
+            className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            Contact Us
+          </a>
         </div>
+        
+        <p className="font-body text-sm text-muted-foreground mt-8">
+          © {new Date().getFullYear()} The Gig Agency. All rights reserved.
+        </p>
       </div>
     </section>
   );

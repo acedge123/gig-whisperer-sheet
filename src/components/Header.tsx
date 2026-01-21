@@ -32,8 +32,8 @@ const Header = () => {
 
   const navLinks = [
     { label: 'Home', href: '#' },
-    { label: 'About', href: '#snapshot' },
-    { label: 'Work', href: '#highlights' },
+    { label: 'About', href: '#about' },
+    { label: 'Work', href: '#' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -52,7 +52,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a href="#" className="flex items-center">
-              <span className="font-display text-2xl md:text-3xl font-bold italic uppercase text-foreground">
+              <span className="font-display text-xl md:text-2xl font-bold italic uppercase text-foreground">
                 The Gig Agency
               </span>
             </a>
@@ -63,7 +63,7 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="font-display text-lg font-bold italic uppercase text-foreground hover:text-accent transition-colors duration-200"
+                  className="font-display text-base font-bold italic uppercase text-foreground hover:text-accent transition-colors duration-200"
                 >
                   {link.label}
                 </a>
