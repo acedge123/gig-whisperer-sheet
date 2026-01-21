@@ -1,14 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ValueProp from "@/components/ValueProp";
 import WhatWeDo from "@/components/WhatWeDo";
 import PerformanceMarketers from "@/components/PerformanceMarketers";
 import HowWeDoIt from "@/components/HowWeDoIt";
 import ClientShowcase from "@/components/ClientShowcase";
 import Insights from "@/components/Insights";
 import Contact from "@/components/Contact";
-import SideContact from "@/components/SideContact";
-import SocialIcons from "@/components/SocialIcons";
+import SideBar from "@/components/SideBar";
 import DownloadPDF from "@/components/DownloadPDF";
 import AnimatedSection from "@/components/AnimatedSection";
 import Preloader from "@/components/Preloader";
@@ -18,13 +16,9 @@ const Index = () => {
     <>
       <Preloader />
       <Header />
-      <SideContact />
-      <SocialIcons />
+      <SideBar />
       <main className="min-h-screen">
         <Hero />
-        <AnimatedSection>
-          <ValueProp />
-        </AnimatedSection>
         <AnimatedSection delay={100}>
           <WhatWeDo />
         </AnimatedSection>
