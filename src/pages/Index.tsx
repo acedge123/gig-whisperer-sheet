@@ -10,6 +10,7 @@ import Contact from "@/components/Contact";
 import SideContact from "@/components/SideContact";
 import SocialIcons from "@/components/SocialIcons";
 import DownloadPDF from "@/components/DownloadPDF";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => {
   return (
@@ -19,13 +20,27 @@ const Index = () => {
       <SocialIcons />
       <main className="min-h-screen">
         <Hero />
-        <ValueProp />
-        <WhatWeDo />
-        <PerformanceMarketers />
-        <HowWeDoIt />
-        <ClientShowcase />
-        <Insights />
-        <Contact />
+        <AnimatedSection>
+          <ValueProp />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <WhatWeDo />
+        </AnimatedSection>
+        <AnimatedSection>
+          <PerformanceMarketers />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <HowWeDoIt />
+        </AnimatedSection>
+        <AnimatedSection>
+          <ClientShowcase />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Insights />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Contact />
+        </AnimatedSection>
         <DownloadPDF />
       </main>
     </>
