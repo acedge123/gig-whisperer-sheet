@@ -11,12 +11,12 @@ const WhatWeDo = () => {
       ],
     },
     {
-      title: "Social Media",
+      title: "Custom AI Development",
       items: [
-        "Strategy",
-        "Organic Content & Posting",
-        "Community Management",
-        "Community Building",
+        "SAAS",
+        "API's",
+        "LLM Model",
+        "Tech Advisory",
       ],
     },
     {
