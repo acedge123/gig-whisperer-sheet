@@ -29,10 +29,11 @@ const WhatWeDo = () => {
       ],
     },
     {
-      title: "SEO / SEM",
+      title: "AEO / SEM",
       items: [
         "Account & Campaign Strategy",
         "Media Management & Optimization",
+        "LLM Answer Optimization",
         "Reporting / KPI",
         "Lifetime Value Analysis",
       ],
