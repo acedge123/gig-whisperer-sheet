@@ -20,8 +20,8 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 pt-32 pb-16">
         {/* Main Headline - Large Navy */}
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] 2xl:text-[154px] font-bold italic uppercase leading-[0.9] mb-16 text-foreground text-center lg:text-left max-w-4xl">
-          AI, Digital Marketing<br />
-          and Tech Gurus
+          Your AI, Marketing<br />
+          & Tech Gurus
         </h1>
         
         {/* Two Value Prop Boxes */}
