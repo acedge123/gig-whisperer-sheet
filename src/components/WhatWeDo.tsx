@@ -51,7 +51,7 @@ const WhatWeDo = () => {
     {
       title: "Web Software Development",
       items: [
-        "Shopify, Wordpress, Custom Development",
+        "Shopify, Big Commerce, Headless, Custom Development",
         "React, Python, Django",
         "Event Tracking / Javascript",
         "Webhook Framework",
