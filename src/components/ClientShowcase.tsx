@@ -4,11 +4,13 @@ import loandepotLogo from '@/assets/clients/loandepot.jpg';
 import creatoriqLogo from '@/assets/clients/creatoriq.png';
 import creditanddebtLogo from '@/assets/clients/creditanddebt.png';
 import copperfitLogo from '@/assets/clients/copperfit.png';
+import savageLogo from '@/assets/clients/savage.png';
 
 const ClientShowcase = () => {
   const clients = [
     { name: "CreatorIQ", logo: creatoriqLogo },
     { name: "Copper Fit", logo: copperfitLogo },
+    { name: "Savage X Fenty", logo: savageLogo },
     { name: "loanDepot", logo: loandepotLogo },
     { name: "Valassis", logo: valassisLogo },
     { name: "Hypeach", logo: hypeachLogo },
