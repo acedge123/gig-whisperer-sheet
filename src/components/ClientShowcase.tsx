@@ -5,6 +5,7 @@ import creatoriqLogo from '@/assets/clients/creatoriq.png';
 import creditanddebtLogo from '@/assets/clients/creditanddebt.png';
 import copperfitLogo from '@/assets/clients/copperfit.png';
 import savageLogo from '@/assets/clients/savage.png';
+import lowesLogo from '@/assets/clients/lowes.png';
 
 const ClientShowcase = () => {
   const clients = [
@@ -15,6 +16,7 @@ const ClientShowcase = () => {
     { name: "Valassis", logo: valassisLogo },
     { name: "Hypeach", logo: hypeachLogo },
     { name: "Credit & Debt", logo: creditanddebtLogo },
+    { name: "Lowe's", logo: lowesLogo },
   ];
 
   return (
@@ -24,11 +26,11 @@ const ClientShowcase = () => {
           Some clients who love us
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
           {clients.map((client, index) => (
             <div
               key={index}
-              className="flex items-center justify-center p-4 opacity-70 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0"
+              className="flex items-center justify-center p-4 opacity-80 hover:opacity-100 transition-all duration-300 grayscale"
             >
               <img 
                 src={client.logo} 
