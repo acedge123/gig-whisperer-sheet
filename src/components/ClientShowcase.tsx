@@ -1,15 +1,18 @@
+import hypeachLogo from '@/assets/clients/hypeach.jpg';
+import valassisLogo from '@/assets/clients/valassis.jpg';
+import loandepotLogo from '@/assets/clients/loandepot.jpg';
+import creatoriqLogo from '@/assets/clients/creatoriq.png';
+import creditanddebtLogo from '@/assets/clients/creditanddebt.png';
+import copperfitLogo from '@/assets/clients/copperfit.png';
+
 const ClientShowcase = () => {
   const clients = [
-    "CreatorIQ",
-    "Lululemon",
-    "Wayfair",
-    "SavageXFenty",
-    "Lowe's",
-    "Guaranteed Rate",
-    "Idea Village",
-    "West Capital Mortgage",
-    "Guild Mortgage",
-    "loanDepot",
+    { name: "CreatorIQ", logo: creatoriqLogo },
+    { name: "Copper Fit", logo: copperfitLogo },
+    { name: "loanDepot", logo: loandepotLogo },
+    { name: "Valassis", logo: valassisLogo },
+    { name: "Hypeach", logo: hypeachLogo },
+    { name: "Credit & Debt", logo: creditanddebtLogo },
   ];
 
   return (
@@ -19,13 +22,17 @@ const ClientShowcase = () => {
           Some clients who love us
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
           {clients.map((client, index) => (
             <div
               key={index}
-              className="p-6 bg-card border border-border hover:border-accent transition-all duration-300 flex items-center justify-center text-center opacity-70 hover:opacity-100"
+              className="flex items-center justify-center p-4 opacity-70 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0"
             >
-              <p className="font-body font-bold text-sm md:text-base text-foreground">{client}</p>
+              <img 
+                src={client.logo} 
+                alt={client.name}
+                className="max-h-12 w-auto object-contain"
+              />
             </div>
           ))}
         </div>
