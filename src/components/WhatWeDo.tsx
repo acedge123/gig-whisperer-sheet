@@ -11,9 +11,9 @@ const WhatWeDo = () => {
       ],
     },
     {
-      title: "Custom AI Development",
+      title: "Paid Social",
       items: [
-        "SAAS",
+        "Social Media - Facebook, Instagram, Tik Tok, Youtube, Pinterest, Twitter",
         "API's",
         "LLM Model",
         "Tech Advisory",
