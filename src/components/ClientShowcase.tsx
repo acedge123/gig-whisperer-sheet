@@ -31,7 +31,7 @@ const ClientShowcase = () => {
               <img 
                 src={client.logo} 
                 alt={client.name}
-                className="max-h-12 w-auto object-contain"
+                className="max-h-20 w-auto object-contain"
               />
             </div>
           ))}
