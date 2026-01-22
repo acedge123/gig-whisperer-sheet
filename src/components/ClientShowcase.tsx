@@ -6,6 +6,7 @@ import creditanddebtLogo from '@/assets/clients/creditanddebt.png';
 import copperfitLogo from '@/assets/clients/copperfit.png';
 import savageLogo from '@/assets/clients/savage.png';
 import lowesLogo from '@/assets/clients/lowes.png';
+import replenzaLogo from '@/assets/clients/replenza.png';
 
 const ClientShowcase = () => {
   const clients = [
@@ -17,6 +18,7 @@ const ClientShowcase = () => {
     { name: "Hypeach", logo: hypeachLogo },
     { name: "Credit & Debt", logo: creditanddebtLogo },
     { name: "Lowe's", logo: lowesLogo },
+    { name: "Replenza", logo: replenzaLogo },
   ];
 
   return (
