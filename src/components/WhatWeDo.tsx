@@ -15,7 +15,7 @@ const WhatWeDo = () => {
       items: [
         "Custom SAAS Applications",
         "API's",
-        "LLM Model",
+        "LLM Model Selection",
         "Tech Advisory",
       ],
     },
