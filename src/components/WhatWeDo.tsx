@@ -7,7 +7,7 @@ const WhatWeDo = () => {
         "Hyperlocal, Geo-targeted",
         "Retargeting",
         "Dynamic Product Feeds",
-        "Social Media - Facebook, Instagram, Tik Tok, Youtube, Pinterest, Twitter",
+        "Paid Social: Facebook/Instagram, Tik Tok, Youtube, Reddit, Pinterest",
       ],
     },
     {
