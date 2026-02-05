@@ -44,6 +44,12 @@ const Contact = () => {
             Terms of Service
           </a>
           <a 
+            href="/ai-data-disclosure" 
+            className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            AI & Data Use
+          </a>
+          <a 
             href="#contact" 
             className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
           >
