@@ -31,12 +31,14 @@ const Contact = () => {
         </div>
 
         <div className="mt-24 pt-12 border-t border-border flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-          <a 
-            href="#" 
-            className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
-          >
-            Privacy Policy
-          </a>
+        <a 
+          href="https://thegig.agency/privacy-policy/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
+        >
+          Privacy Policy
+        </a>
           <a 
             href="#" 
             className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
